@@ -3,13 +3,13 @@ import '../styles/App.css';
 import ChildComponent from './ChildComponent';
 const App = () => {
  //code here
-
+const [value, setValue] = React.useState(0);
   return (
     <div id="main">
       <ChildComponent /> 
-       <input id='input' onChange={} />
+       <input id='input' onChange={(e) => {setValue(e.target.value)}}/>
     
-      <p id='output'>{}</p>
+      <p id='output'>{Math.pow(value,2)}</p>
     </div>
   )
 }
