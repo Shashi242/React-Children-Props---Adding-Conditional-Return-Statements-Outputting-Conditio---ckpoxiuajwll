@@ -9,7 +9,7 @@ const [value, setValue] = React.useState(0);
       <ChildComponent /> 
        <input id='input' onChange={(e) => {setValue(e.target.value)}}/>
     
-      <p id='output'>{Math.pow(value,2)}</p>
+      <p id='output' value={value}>{Math.pow(value,2)}</p>
     </div>
   )
 }
